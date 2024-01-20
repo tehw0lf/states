@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+
+import { LocalStorageComponent } from './local-storage/local-storage.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [LocalStorageComponent],
   selector: 'states-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'states';
+
+  constructor() {
+    localStorage.setItem('theme', 'dark');
+  }
 }
