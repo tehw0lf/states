@@ -1,18 +1,26 @@
 .dark {
   background-color: black;
-  border-color: white;
+  box-shadow: 3px 5px 5px lightgray;
+  border: 2px solid white;
 }
 
 .light {
   background-color: white;
-  border-color: black;
+  box-shadow: 3px 5px 5px darkgray;
+  border: 2px solid black;
 }
 
 .subject {
   width: 222px;
-  height: 111px;
+  height: 222px;
   border-radius: 1.5rem;
+
   transition-property: background-color, border-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+
+  div {
+    justify-self: center;
+    max-width: 300px;
+  }
 }
