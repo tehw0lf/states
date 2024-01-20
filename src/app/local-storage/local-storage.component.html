@@ -1,0 +1,12 @@
+<div
+  class="local-storage"
+  [ngClass]="getTheme() === 'dark' ? 'dark' : 'light'"
+  (click)="toggleTheme($event)"
+>
+  <states-signal></states-signal>
+  <states-subject></states-subject>
+  <states-signal></states-signal>
+  <states-subject></states-subject>
+  <states-signal></states-signal>
+  <states-subject></states-subject>
+</div>

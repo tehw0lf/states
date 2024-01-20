@@ -1,0 +1,24 @@
+.dark {
+  background-color: black;
+  border-color: white;
+}
+
+.light {
+  background-color: white;
+  border-color: black;
+}
+
+.local-storage {
+  width: 666px;
+  height: 444px;
+  border-radius: 1.5rem;
+  transition-property: background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  display: grid;
+
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
