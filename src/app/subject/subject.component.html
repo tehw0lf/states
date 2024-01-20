@@ -1,0 +1,5 @@
+<div
+  class="subject"
+  [ngClass]="(darkTheme() | async) ? 'dark' : 'light'"
+  (click)="toggleTheme($event)"
+></div>
