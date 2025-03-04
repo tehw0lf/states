@@ -25,3 +25,4 @@ jobs:
       event_name: ${{ github.event_name }}
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'
       artifact_path: 'dist/states/browser/'
+      docker_pre: 'ls dist/ && ls dist/states/browser/'
