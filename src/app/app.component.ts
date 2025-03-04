@@ -10,8 +10,6 @@ import { LocalStorageComponent } from './local-storage/local-storage.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'states';
-
   constructor() {
     localStorage.setItem('theme', 'dark');
   }
