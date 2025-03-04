@@ -23,4 +23,4 @@ jobs:
       build_branch: 'run build'
       build_main: 'run build --skip-nx-cache'
       event_name: ${{ github.event_name }}
-      docker-meta: '[{"name":"states","file":"Dockerfile"}]'
+      docker_meta: '[{"name":"states","file":"Dockerfile"}]'
