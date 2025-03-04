@@ -4,6 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "format": "nx format",
+    "lint": "nx lint",
     "build": "nx build",
     "test": "nx test"
   },
@@ -61,4 +63,3 @@
     "typescript": "~5.2.2"
   }
 }
-
