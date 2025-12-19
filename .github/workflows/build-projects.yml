@@ -11,18 +11,19 @@ jobs:
     name: external workflow
     uses: tehw0lf/workflows/.github/workflows/build-test-publish.yml@main
     permissions:
-      id-token: write    # REQUIRED - Always needed for OIDC (npm Trusted Publishing + future integrations)
+      id-token: write
       actions: write
       contents: write
       packages: write
+      security-events: write
     with:
-      tool: 'npm'
-      format: 'run format'
-      install: 'install --legacy-peer-deps'
-      lint: 'run lint'
-      test: 'run test --ci --code-coverage'
-      build_branch: 'run build'
-      build_main: 'run build --skip-nx-cache'
+      tool: "npm"
+      format: "run format"
+      install: "install --legacy-peer-deps"
+      lint: "run lint"
+      test: "run test --ci --code-coverage"
+      build_branch: "run build"
+      build_main: "run build --skip-nx-cache"
       event_name: ${{ github.event_name }}
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'
-      artifact_path: 'dist'
+      artifact_path: "dist"
