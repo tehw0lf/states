@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { StateService } from './state.service';
@@ -12,7 +12,8 @@ import { StateService } from './state.service';
   styleUrl: './subject.component.scss',
 })
 export class ServiceComponent {
-  constructor(private stateService: StateService) {}
+  private stateService = inject(StateService);
+
 
   darkTheme(): Observable<boolean> {
     return this.stateService.darkTheme$;
