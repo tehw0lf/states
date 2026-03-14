@@ -20,10 +20,10 @@ jobs:
     with:
       tool: "npm"
       format: "run format"
-      install: "install --legacy-peer-deps"
       lint: "run lint"
       test: "run test --ci --code-coverage"
       build_branch: "run build"
       build_main: "run build --skip-nx-cache"
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'
       artifact_path: "dist"
+      npm_audit_omit_dev: true
