@@ -24,7 +24,7 @@
     "zone.js": "0.16.0"
   },
   "devDependencies": {
-    "@nx/angular": "22.5.4",
+    "@nx/angular": "22.6.1",
     "@angular-eslint/eslint-plugin": "21.2.0",
     "@angular-eslint/eslint-plugin-template": "21.2.0",
     "@angular-eslint/template-parser": "21.2.0",
