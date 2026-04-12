@@ -36,7 +36,7 @@
     "@nx/eslint": "22.6.5",
     "@nx/eslint-plugin": "22.6.5",
     "@nx/jest": "22.6.5",
-    "@nx/js": "22.6.4",
+    "@nx/js": "22.6.5",
     "@nx/playwright": "22.6.5",
     "@nx/workspace": "22.6.5",
     "@playwright/test": "1.58.1",
