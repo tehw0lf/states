@@ -117,5 +117,8 @@
   },
   "defaultProject": "states",
   "useInferencePlugins": false,
-  "analytics": false
+  "analytics": false,
+  "migrate": {
+    "agentic": true
+  }
 }
