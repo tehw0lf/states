@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { LocalStorageComponent } from './local-storage/local-storage.component';
 
@@ -7,6 +7,7 @@ import { LocalStorageComponent } from './local-storage/local-storage.component';
   imports: [LocalStorageComponent],
   selector: 'states-root',
   templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.component.scss',
 })
 export class AppComponent {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { StateService } from './state.service';
@@ -9,6 +9,7 @@ import { StateService } from './state.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './subject.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './subject.component.scss',
 })
 export class ServiceComponent {
