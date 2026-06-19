@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SignalComponent } from '../signal/signal.component';
 import { ServiceComponent } from '../subject/subject.component';
@@ -9,6 +9,7 @@ import { ServiceComponent } from '../subject/subject.component';
   standalone: true,
   imports: [SignalComponent, ServiceComponent, CommonModule],
   templateUrl: './local-storage.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './local-storage.component.scss',
 })
 export class LocalStorageComponent {

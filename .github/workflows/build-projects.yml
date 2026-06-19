@@ -28,3 +28,4 @@ jobs:
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'
       artifact_path: "dist"
       npm_audit_omit_dev: true
+      cyclonedx_ignore_npm_errors: true
