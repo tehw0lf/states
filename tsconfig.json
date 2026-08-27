@@ -23,7 +23,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "ignoreDeprecations": "6.0",
-    "noUncheckedSideEffectImports": false
+    "noUncheckedSideEffectImports": false,
+    "types": ["*"]
   },
   "files": [],
   "include": [],
