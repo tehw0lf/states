@@ -1,13 +1,14 @@
 {
   "name": "@states/source",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "format": "nx format",
-    "lint": "nx lint",
-    "build": "nx build",
-    "test": "nx test"
+    "lint": "nx run-many -t lint",
+    "build": "nx run-many -t build",
+    "test": "nx run-many -t test",
+    "e2e": "nx e2e e2e"
   },
   "private": true,
   "dependencies": {
