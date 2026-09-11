@@ -22,7 +22,7 @@ jobs:
       tool: "npm"
       format: "run format"
       lint: "run lint"
-      test: "run test --ci --code-coverage"
+      test: "run test -- --configuration=ci"
       build_branch: "run build"
       build_main: "run build --skip-nx-cache"
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'

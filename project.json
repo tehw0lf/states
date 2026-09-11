@@ -63,19 +63,28 @@
         "buildTarget": "states:build"
       }
     },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["./src"]
-      }
-    },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectName}"],
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js",
+        {
+          "externalDependencies": [
+            "jest",
+            "@nx/jest",
+            "ts-jest",
+            "jest-preset-angular"
+          ]
+        }
+      ],
       "options": {
-        "jestConfig": "jest.config.ts",
-        "tsConfig": "tsconfig.spec.json"
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "coverage": true
+        }
       }
     }
   }
