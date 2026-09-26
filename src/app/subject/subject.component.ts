@@ -15,7 +15,6 @@ import { StateService } from './state.service';
 export class ServiceComponent {
   private stateService = inject(StateService);
 
-
   darkTheme(): Observable<boolean> {
     return this.stateService.darkTheme$;
   }

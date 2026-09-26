@@ -21,7 +21,7 @@ export class LocalStorageComponent {
     $event.stopPropagation();
     localStorage.setItem(
       'theme',
-      this.getTheme() === 'dark' ? 'light' : 'dark'
+      this.getTheme() === 'dark' ? 'light' : 'dark',
     );
   }
 }
