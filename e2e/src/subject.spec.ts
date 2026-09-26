@@ -12,7 +12,9 @@ test.describe('Subject/Service state', () => {
     }
   });
 
-  test('clicking one subject block toggles all subject blocks', async ({ page }) => {
+  test('clicking one subject block toggles all subject blocks', async ({
+    page,
+  }) => {
     const blocks = page.locator('.subject');
     const first = blocks.nth(0);
 
@@ -23,7 +25,9 @@ test.describe('Subject/Service state', () => {
     }
   });
 
-  test('clicking a subject block twice returns all to dark', async ({ page }) => {
+  test('clicking a subject block twice returns all to dark', async ({
+    page,
+  }) => {
     const blocks = page.locator('.subject');
     const first = blocks.nth(0);
 
@@ -35,7 +39,9 @@ test.describe('Subject/Service state', () => {
     }
   });
 
-  test('toggling from any subject block affects all others', async ({ page }) => {
+  test('toggling from any subject block affects all others', async ({
+    page,
+  }) => {
     const blocks = page.locator('.subject');
     const second = blocks.nth(1);
     const third = blocks.nth(2);

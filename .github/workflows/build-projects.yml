@@ -19,13 +19,13 @@ jobs:
       security-events: write
       pull-requests: write
     with:
-      tool: "npm"
-      format: "run format"
-      lint: "run lint"
-      test: "run test -- --configuration=ci"
-      build_branch: "run build"
-      build_main: "run build --skip-nx-cache"
+      tool: 'npm'
+      format: 'run format'
+      lint: 'run lint'
+      test: 'run test -- --configuration=ci'
+      build_branch: 'run build'
+      build_main: 'run build --skip-nx-cache'
       docker_meta: '[{"name":"states","file":"Dockerfile"}]'
-      artifact_path: "dist"
+      artifact_path: 'dist'
       npm_audit_omit_dev: true
       cyclonedx_ignore_npm_errors: true

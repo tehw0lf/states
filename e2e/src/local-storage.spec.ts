@@ -10,20 +10,27 @@ test.describe('LocalStorage state', () => {
     await expect(container).toHaveClass(/dark/);
   });
 
-  test('container respects dark theme from localStorage on reload', async ({ page }) => {
+  test('container respects dark theme from localStorage on reload', async ({
+    page,
+  }) => {
     await page.evaluate(() => localStorage.setItem('theme', 'dark'));
     await page.reload();
     await expect(page.locator('.local-storage')).toHaveClass(/dark/);
   });
 
   // BUG: AppComponent constructor always sets 'dark', overriding any existing localStorage value on reload
-  test.fail('container respects light theme from localStorage on reload', async ({ page }) => {
-    await page.evaluate(() => localStorage.setItem('theme', 'light'));
-    await page.reload();
-    await expect(page.locator('.local-storage')).toHaveClass(/light/);
-  });
+  test.fail(
+    'container respects light theme from localStorage on reload',
+    async ({ page }) => {
+      await page.evaluate(() => localStorage.setItem('theme', 'light'));
+      await page.reload();
+      await expect(page.locator('.local-storage')).toHaveClass(/light/);
+    },
+  );
 
-  test('clicking the container toggles theme to light in localStorage', async ({ page }) => {
+  test('clicking the container toggles theme to light in localStorage', async ({
+    page,
+  }) => {
     const container = page.locator('.local-storage');
 
     await container.click();
@@ -32,7 +39,9 @@ test.describe('LocalStorage state', () => {
     expect(theme).toBe('light');
   });
 
-  test('clicking the container twice restores dark theme in localStorage', async ({ page }) => {
+  test('clicking the container twice restores dark theme in localStorage', async ({
+    page,
+  }) => {
     const container = page.locator('.local-storage');
 
     await container.click();
@@ -43,19 +52,26 @@ test.describe('LocalStorage state', () => {
   });
 
   // BUG: AppComponent constructor always sets 'dark', overriding any existing localStorage value on reload
-  test.fail('light theme persists and renders correctly after reload', async ({ page }) => {
-    const container = page.locator('.local-storage');
+  test.fail(
+    'light theme persists and renders correctly after reload',
+    async ({ page }) => {
+      const container = page.locator('.local-storage');
 
-    await container.click();
-    const themeAfterClick = await page.evaluate(() => localStorage.getItem('theme'));
-    expect(themeAfterClick).toBe('light');
+      await container.click();
+      const themeAfterClick = await page.evaluate(() =>
+        localStorage.getItem('theme'),
+      );
+      expect(themeAfterClick).toBe('light');
 
-    await page.reload();
+      await page.reload();
 
-    await expect(page.locator('.local-storage')).toHaveClass(/light/);
-  });
+      await expect(page.locator('.local-storage')).toHaveClass(/light/);
+    },
+  );
 
-  test('localStorage state does not affect signal or subject blocks', async ({ page }) => {
+  test('localStorage state does not affect signal or subject blocks', async ({
+    page,
+  }) => {
     const container = page.locator('.local-storage');
 
     await container.click();

@@ -12,7 +12,9 @@ test.describe('Signal state', () => {
     }
   });
 
-  test('clicking one signal block toggles only that block', async ({ page }) => {
+  test('clicking one signal block toggles only that block', async ({
+    page,
+  }) => {
     const blocks = page.locator('.signal');
     const first = blocks.nth(0);
     const second = blocks.nth(1);
@@ -25,7 +27,9 @@ test.describe('Signal state', () => {
     await expect(third).toHaveClass(/dark/);
   });
 
-  test('clicking the same signal block twice returns it to dark', async ({ page }) => {
+  test('clicking the same signal block twice returns it to dark', async ({
+    page,
+  }) => {
     const block = page.locator('.signal').first();
 
     await block.click();
