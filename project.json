@@ -1,7 +1,6 @@
 {
   "name": "states",
   "$schema": "node_modules/nx/schemas/project-schema.json",
-  "includedScripts": [],
   "projectType": "application",
   "prefix": "states",
   "sourceRoot": "./src",
